@@ -62,6 +62,15 @@ document.querySelector('.buttons').onclick = (event) => {
         sign = key;
         out.textContent = sign;
         console.table(a, b, sign);
+        if (out.textContent.length > 7) {
+            out.style = 'font-size: 3rem;';
+            if (out.textContent.length > 10) {
+                out.style = 'font-size: 2rem;';
+                if (out.textContent.length > 15) {
+                    out.style = 'font-size: 1rem;';
+                }
+            }
+        }
         return;
     }
 
@@ -89,5 +98,14 @@ document.querySelector('.buttons').onclick = (event) => {
         finish = true;
         out.textContent = a;
         console.table(a, b, sign);
+        if (out.textContent.length < 15) {
+            out.style = 'font-size: 2rem;';
+            if (out.textContent.length < 10) {
+                out.style = 'font-size: 3rem;';
+                if (out.textContent.length < 7) {
+                    out.style = 'font-size: 4rem;';
+                }
+            }
+        }
     }
 }
