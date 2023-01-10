@@ -54,14 +54,6 @@ document.querySelector('.buttons').onclick = (event) => {
             out.textContent = b;
         }
         console.table(a, b, sign);
-        return;
-    }
-
-    // if press btn + - ÷ ×
-    if (action.includes(key)) {
-        sign = key;
-        out.textContent = sign;
-        console.table(a, b, sign);
         if (out.textContent.length > 7) {
             out.style = 'font-size: 3rem;';
             if (out.textContent.length > 10) {
@@ -71,6 +63,13 @@ document.querySelector('.buttons').onclick = (event) => {
                 }
             }
         }
+        return;
+    }
+
+    // if press btn + - ÷ ×
+    if (action.includes(key)) {
+        sign = key;
+        out.textContent = sign;
         return;
     }
 
